@@ -12,7 +12,7 @@
 
 NAME = libftprintf.a
 
-SRC = ft_printf.c print_c_s_i_p.c print_u_x_X_%.c tools.c 2tools.c\
+SRC = ft_printf.c print_c_s_i_p.c print_u_x_X_%.c tools.c tools2.c\
 
 C_FLAGS = -Wall -Wextra -Werror
 
