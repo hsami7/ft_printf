@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 00:57:53 by hsami             #+#    #+#             */
-/*   Updated: 2023/06/18 19:01:48 by hsami            ###   ########.fr       */
+/*   Updated: 2023/06/30 16:02:23 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,40 @@ int	percent_cases(va_list list, const char c)
 		len = print_string(list);
 		len++;
 	}
-	if (c == 'c')
+	else if (c == 'c')
 	{
 		len = print_char(list);
+		len++;
+	}
+
+	else if (c == 'p')
+	{
+		len = print_pointer(list);
+		len++;
+	}
+	else if (c == 'd' || c == 'i')
+	{
+		len = print_intiger(list);
+		len++;
+	}
+	else if (c == 'u')
+	{
+		len = print_unsigned(list);
+		len++;
+	}
+	else if (c == 'x')
+	{
+		len = print_lowerhexa(list);
+		len++;
+	}
+	else if (c == 'X')
+	{
+		len = print_upperhexa(list);
+		len++;
+	}
+	else if (c == '%')
+	{
+		len = print_percent();
 		len++;
 	}
 	return (len);
