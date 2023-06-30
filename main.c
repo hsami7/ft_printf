@@ -31,11 +31,11 @@ int a = 19;
 	ft_printf("%d\n", a); 
 	printf("%%");  
  	ft_printf("%%");
-int number = 10;
+/*int number = 10;
   	char *string = "Hello, world!";
 
   	ft_printf("%d\n", number);
   	ft_printf("%s\n", string);
 
-  return 0;
+  return 0;*/
 } 
