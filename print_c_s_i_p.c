@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c_s.c                                        :+:      :+:    :+:   */
+/*   print_c_s_i_p.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:19:42 by hsami             #+#    #+#             */
-/*   Updated: 2023/06/22 17:03:22 by hsami            ###   ########.fr       */
+/*   Updated: 2023/06/30 16:40:46 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,8 @@ int	print_intiger(va_list list)
 	int		intiger;
 	size_t	len;
 
-	len = 0;
 	intiger = va_arg(list, int);
-	if (intiger < 0)
-	{
-		ft_putchar_fd('-', 1);
-		intiger -= intiger;
-		len++;
-	}
+	len = long_len((long) intiger);
 	ft_putnbr_fd(intiger, 1);
 	return (len);
 }

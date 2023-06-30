@@ -6,7 +6,7 @@
 /*   By: hsami <hsami@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 16:23:19 by hsami             #+#    #+#             */
-/*   Updated: 2023/06/30 17:03:32 by hsami            ###   ########.fr       */
+/*   Updated: 2023/06/30 17:30:22 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ int a = 19;
 	ft_printf("%d\n", a); 
 	printf("%%");  
  	ft_printf("%%");
-/*int number = 10;
-  	char *string = "Hello, world!";
-
-  	ft_printf("%d\n", number);
-  	ft_printf("%s\n", string);
-
-  return 0;*/
+	printf("%s\n", "hatim");
+	ft_printf("%s\n", "hatim");
 } 
