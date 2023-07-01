@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsami <hsami@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 00:57:53 by hsami             #+#    #+#             */
-/*   Updated: 2023/06/30 18:36:02 by hsami            ###   ########.fr       */
+/*   Created: 2023/07/01 17:19:23 by hsami             #+#    #+#             */
+/*   Updated: 2023/07/01 17:32:59 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	percent_cases(va_list list, const char c)
 	{
 		len += print_char(list);
 	}
-
 	else if (c == 'p')
 	{
 		len += print_pointer(list);
@@ -35,7 +34,16 @@ int	percent_cases(va_list list, const char c)
 	{
 		len += print_intiger(list);
 	}
-	else if (c == 'u')
+	print_u_l_u_p(list, c);
+	return (len);
+}
+
+int	print_u_l_u_p(va_list list, const char c)
+{
+	int	len;
+
+	len = 0;
+	if (c == 'u')
 	{
 		len += print_unsigned(list);
 	}
@@ -54,11 +62,11 @@ int	percent_cases(va_list list, const char c)
 	return (len);
 }
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	size_t i;
-	size_t len;
-	va_list list;
+	size_t	i;
+	size_t	len;
+	va_list	list;
 
 	i = 0;
 	len = 0;

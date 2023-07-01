@@ -6,13 +6,13 @@
 #    By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 22:10:53 by hsami             #+#    #+#              #
-#    Updated: 2023/06/23 16:24:23 by hsami            ###   ########.fr        #
+#    Updated: 2023/07/01 17:20:12 by hsami            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = ft_printf.c print_c_s_i_p.c print_u_x_X_%.c tools.c tools2.c\
+SRC = ft_printf.c print_c_s_i_p.c print_u_x_X_.c tools.c tools2.c\
 
 C_FLAGS = -Wall -Wextra -Werror
 
