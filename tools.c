@@ -30,7 +30,7 @@ char	*ft_int_to_hexa(unsigned long n)
 	hexastr = (char *) malloc((len + 1) * sizeof(char));
 	if (!hexastr)
 		return (0);
-	hexastr[len--] = '\0';
+	hexastr[--len] = '\0';
 	if (n == 0)
 	{
 		hexastr[0] = '0';
