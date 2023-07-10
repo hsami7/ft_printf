@@ -30,7 +30,7 @@ int	print_string(va_list list)
 	str = va_arg(list, char *);
 	if (!str)
 	{
-		//strlen = ft_strlen(str);
+		strlen = ft_strlen(str);
 		ft_putstr_fd("(null)", 1);
 		return (strlen);
 	}
