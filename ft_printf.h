@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: amehrotr <amehrotr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:20:48 by hsami             #+#    #+#             */
-/*   Updated: 2023/07/01 17:34:59 by hsami            ###   ########.fr       */
+/*   Updated: 2023/07/10 18:28:59 by amehrotr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_printf(const char *str, ...);
 //print cases

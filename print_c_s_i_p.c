@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_c_s_i_p.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
+/*   By: amehrotr <amehrotr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:19:42 by hsami             #+#    #+#             */
-/*   Updated: 2023/07/01 17:19:56 by hsami            ###   ########.fr       */
+/*   Updated: 2023/07/10 18:22:11 by amehrotr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ int	print_string(va_list list)
 	str = va_arg(list, char *);
 	if (!str)
 	{
-		strlen = ft_strlen(str);
 		ft_putstr_fd("(null)", 1);
-		return (strlen);
+		return (6);
 	}
 	else
 	{
@@ -67,10 +66,10 @@ int	print_pointer(va_list list)
 		return (3);
 	}
 	p_long = (unsigned long) point;
-	len = hexa_len(p_long) + 2;
 	hexa = ft_int_to_hexa(p_long);
 	write(1, "0x", 2);
 	ft_putstr_fd(hexa, 1);
+	len = strlen(hexa) + 2;
 	free(hexa);
 	return (len);
 }
