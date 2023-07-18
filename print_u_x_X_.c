@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_u_x_X_.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amehrotr <amehrotr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 15:25:56 by hsami             #+#    #+#             */
-/*   Updated: 2023/07/10 18:28:30 by amehrotr         ###   ########.fr       */
+/*   Updated: 2023/07/18 19:12:35 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,42 +15,41 @@
 
 int	print_unsigned(va_list list)
 {
-	unsigned int	unsigned_int;
-	size_t			len;
+	unsigned int	n;
 
-	unsigned_int = va_arg(list, unsigned int);
-	len = long_len((long) unsigned_int);
-	ft_put_unsigned_nbr(unsigned_int);
-	return (len);
+	n = va_arg(list, unsigned int);
+	if (n == 0)
+	{
+		ft_putchar_fd('0', 1);
+		return (1);
+	}
+	return (ft_print_nbr(n, 48, 10));
 }
 
 int	print_upperhexa(va_list list)
 {
-	unsigned int	hexa;
-	size_t			len;
-	char			*hexastr;
+	unsigned int	n;
 
-	hexa = va_arg(list, unsigned int);
-	len = hexa_len((unsigned int) hexa);
-	hexastr = ft_int_to_hexa(hexa);
-	ft_str_toupper(hexastr);
-	ft_putstr_fd(hexastr, 1);
-	free(hexastr);
-	return (len);
+	n = va_arg(list, unsigned int);
+	if (n == 0)
+	{
+		ft_putchar_fd('0', 1);
+		return (1);
+	}
+	return (ft_print_nbr(n, 55, 16));
 }
 
 int	print_lowerhexa(va_list list)
 {
-	unsigned int	hexa;
-	size_t			len;
-	char			*hexastr;
+	unsigned int	n;
 
-	hexa = va_arg(list, unsigned int);
-	len = hexa_len((unsigned int) hexa);
-	hexastr = ft_int_to_hexa(hexa);
-	ft_putstr_fd(hexastr, 1);
-	free(hexastr);
-	return (len);
+	n = va_arg(list, unsigned int);
+	if (n == 0)
+	{
+		ft_putchar_fd('0', 1);
+		return (1);
+	}
+	return (ft_print_nbr(n, 87, 16));
 }
 
 int	print_percent(void)

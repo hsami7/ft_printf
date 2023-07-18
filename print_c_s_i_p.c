@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_c_s_i_p.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amehrotr <amehrotr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:19:42 by hsami             #+#    #+#             */
-/*   Updated: 2023/07/10 18:22:11 by amehrotr         ###   ########.fr       */
+/*   Updated: 2023/07/18 19:11:21 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,22 +54,14 @@ int	print_intiger(va_list list)
 
 int	print_pointer(va_list list)
 {
-	void			*point;
-	char			*hexa;
-	size_t			len;
-	unsigned long	p_long;
+	unsigned long	n;
 
-	point = va_arg(list, void *);
-	if (!point)
+	n = va_arg(list, unsigned long);
+	if (n == 0)
 	{
-		write(1, "0x0", 3);
+		ft_putstr_fd("0x0", 1);
 		return (3);
 	}
-	p_long = (unsigned long) point;
-	hexa = ft_int_to_hexa(p_long);
-	write(1, "0x", 2);
-	ft_putstr_fd(hexa, 1);
-	len = strlen(hexa) + 2;
-	free(hexa);
-	return (len);
+	ft_putstr_fd("0x", 1);
+	return (ft_print_nbr(n, 87, 16) + 2);
 }

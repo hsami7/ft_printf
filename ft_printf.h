@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amehrotr <amehrotr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hsami <hsami@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:20:48 by hsami             #+#    #+#             */
-/*   Updated: 2023/07/10 18:28:59 by amehrotr         ###   ########.fr       */
+/*   Updated: 2023/07/18 19:07:03 by hsami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ size_t	hexa_len(unsigned long n);
 size_t	long_len(long n);
 void	ft_put_unsigned_nbr(unsigned int n);
 void	ft_str_toupper(char *str);
+int		ft_print_nbr(unsigned long long n, int mode, int base);
 
 #endif
